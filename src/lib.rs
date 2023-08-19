@@ -1,7 +1,8 @@
 use std::{env, fs, process::Command};
 
 use abi_stable::std_types::{ROption, RString, RVec};
-use anyrun_plugin::*;
+use anyrun_interface::{HandleResult, Match, PluginInfo};
+use anyrun_macros::{get_matches, handler, info, init};
 use serde::Deserialize;
 
 #[derive(Deserialize)]
